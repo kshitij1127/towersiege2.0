@@ -1,7 +1,7 @@
 class Block {
     constructor(x, y, width, height) {
       var options = {
-          isStatic : true,
+          isStatic : false,
           'density':1.0
         }
       this.body = Bodies.rectangle(x, y, width, height, options);

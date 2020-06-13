@@ -6,6 +6,7 @@ const Constraint = Matter.Constraint
 var engine , world
 
 function setup() {
+ background("white")   
 createCanvas(1200,800)
 engine = Engine.create()
 world = engine.world
@@ -28,6 +29,7 @@ block9 = new Block(390,155,30,40)
 polygon1 = new Polygon(20,500,20)
 
 slingShot = new SlingShot(polygon1.body,{x:100,y:200})
+
 }
 
 function draw() {
@@ -48,8 +50,11 @@ function draw() {
 
 function mouseDragged() {
 Matter.Body.setPosition(polygon1.body,{x:mouseX,y:mouseY})
+
 }
 
 function mouseReleased() {
     slingShot.fly()
+    
 }
+
